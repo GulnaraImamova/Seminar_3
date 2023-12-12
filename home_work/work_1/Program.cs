@@ -43,3 +43,43 @@ Console.WriteLine("Четных чисел = " + count);
 
 
 
+// Задача 3: Задайте массив из вещественных чисел с ненулевой дробной частью. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+
+double[] array = new double[10];
+
+for(int i = 0; i < array.Length; i++)
+{
+    array[i] = new Random().NextDouble();
+    Console.Write(array[i].ToString("F2") + " ");
+}
+
+double max = array[0];
+double min = array[0];
+
+for(int i = 0; i < array.Length; i++)
+{
+    if(array[i] > max)
+    {
+        max = array[i];
+    }
+    if(array[i] < min)
+    {
+        min = array[i];
+    }
+}
+
+Console.WriteLine();
+
+string smax = max.ToString("F2");
+string smin = min.ToString("F2");
+Console.WriteLine("Max " + smax);
+Console.WriteLine("Min " + smin);
+
+double result = max - min;
+string res = result.ToString("F2");
+
+Console.WriteLine("Разница между макс. и мин. элементом массива = " + res);
+
+
+
